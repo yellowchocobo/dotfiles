@@ -1,0 +1,6 @@
+alias.sla=log --oneline --decorate --graph --all
+alias.glog=log -E -i --grep
+alias.car=commit --amend --no-edit
+alias.unstage=reset
+alias.uncommit=reset --soft HEAD^
+
