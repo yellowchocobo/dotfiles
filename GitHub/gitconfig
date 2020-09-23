@@ -1,6 +1,41 @@
-alias.sla=log --oneline --decorate --graph --all
-alias.glog=log -E -i --grep
-alias.car=commit --amend --no-edit
-alias.unstage=reset
-alias.uncommit=reset --soft HEAD^
+[user]
+	name = Nils C. Prieur
+	email = prieur@stcorp.no
+[credential]
+[alias]
+        aa = add --all
+        b = branch
+	browse = !hub browse
+        compare = !hub compare
+        issues = !hub browse -- issues
+	bom = push --set-upstream origin master
+        ca = commit --amend
+        co = checkout
+        dc = diff --word-diff --cached --color-words
+        df = diff --word-diff --color-words
+        master = checkout master
+        pl = pull
+        plr = pull --rebase
+        sla = log --oneline --decorate --graph --all -20
+	glog = log -E -i --grep
+	car = commit --amend --no-edit
+	unstage = reset
+	uncommit = reset --soft HEAD^
+        rbc = rebase --continue
+        ri = rebase -i
+        rom = remote add origin
+        rpo = remote prune origin
+        si = status --ignored
+        sl = log --oneline --decorate --graph -20
+        slap = log --oneline --decorate --graph --all
+        slp = log --oneline --decorate --graph
+        
+[push]
+	default = upstream
 
+[merge]
+        ff = only
+[fetch]
+        prune = true
+[commit]
+        template = ~/.gitmessage
