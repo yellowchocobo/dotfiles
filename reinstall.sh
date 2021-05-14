@@ -53,4 +53,20 @@ sudo snap install pycharm-community --classic
 # tmux
 sudo apt-get install tmux
 
+# inkscape
+sudo apt-get install inkscape
 
+# google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+# zoom
+wget https://zoom.us/client/latest/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
+
+# sublime text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
